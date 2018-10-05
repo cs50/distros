@@ -4,11 +4,14 @@
 
 #include "dictionary.h"
 
+// Represents number of children for each node in a trie
+#define N 27
+
 // Represents a node in a trie
 typedef struct node
 {
     bool is_word;
-    struct node *children[27];
+    struct node *children[N];
 }
 
 // Represents a trie
@@ -24,14 +27,14 @@ bool check(const char *word)
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
 {
-    // Initialize root of trie
+    // Initialize trie
     root = malloc(sizeof(node));
     if (root == NULL)
     {
         return false;
     }
     trie->is_word = false;
-    for (int i = 0; i < 27; i++)
+    for (int i = 0; i < N; i++)
     {
         trie->children[i] = NULL;
     }
@@ -53,7 +56,7 @@ bool load(const char *dictionary)
         // TODO
     }
 
-    // Close file
+    // Close dictionary
     fclose(file);
 
     // Indicate success
