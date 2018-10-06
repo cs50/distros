@@ -20,13 +20,6 @@ node;
 // Represents a hash table
 node *hashtable[N];
 
-// Returns true if word is in dictionary else false
-bool check(const char *word)
-{
-    // TODO
-    return false;
-}
-
 // Hashes word to a number between 0 and 25, inclusive, based on its first letter
 unsigned int hash(const char *word)
 {
@@ -71,6 +64,13 @@ unsigned int size(void)
 {
     // TODO
     return 0;
+}
+
+// Returns true if word is in dictionary else false
+bool check(const char *word)
+{
+    // TODO
+    return false;
 }
 
 // Unloads dictionary from memory, returning true if successful else false

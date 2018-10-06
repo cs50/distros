@@ -20,13 +20,6 @@ node;
 // Represents a trie
 node *root;
 
-// Returns true if word is in dictionary else false
-bool check(const char *word)
-{
-    // TODO
-    return false;
-}
-
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
 {
@@ -71,6 +64,13 @@ unsigned int size(void)
 {
     // TODO
     return 0;
+}
+
+// Returns true if word is in dictionary else false
+bool check(const char *word)
+{
+    // TODO
+    return false;
 }
 
 // Unloads dictionary from memory, returning true if successful else false
