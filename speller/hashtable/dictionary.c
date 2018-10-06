@@ -1,6 +1,5 @@
 // Implements a dictionary's functionality
 
-#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 
@@ -30,7 +29,7 @@ bool check(const char *word)
 // Hashes word to a number between 0 and 25, inclusive, based on its first letter
 unsigned int hash(const char *word)
 {
-    return toupper(word[0]) - 'A';
+    return word[0] - 'a';
 }
 
 // Loads dictionary into memory, returning true if successful else false
