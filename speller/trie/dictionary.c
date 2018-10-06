@@ -13,6 +13,7 @@ typedef struct node
     bool is_word;
     struct node *children[N];
 }
+node;
 
 // Represents a trie
 node *root;
@@ -33,10 +34,10 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    trie->is_word = false;
+    root->is_word = false;
     for (int i = 0; i < N; i++)
     {
-        trie->children[i] = NULL;
+        root->children[i] = NULL;
     }
 
     // Open dictionary
