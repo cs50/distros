@@ -1,12 +1,13 @@
 // Implements a dictionary's functionality
 
+#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 
 #include "dictionary.h"
 
 // Represents number of buckets in a hash table
-#define N 50
+#define N 26
 
 // Represents a node in a hash table
 typedef struct node
@@ -26,11 +27,10 @@ bool check(const char *word)
     return false;
 }
 
-// Returns index of a bucket in hash table
+// Hashes word to a number between 0 and 25, inclusive, based on its first letter
 unsigned int hash(const char *word)
 {
-    // TODO
-    return 0;
+    return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful else false
